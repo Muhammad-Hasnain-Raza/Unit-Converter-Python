@@ -1,6 +1,14 @@
 import streamlit as st
 
-st.title("🌍Unit Converter App")
+st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("Unit Converter App")
 st.markdown("### Converts Length, Weight And Time Instantly")
 st.write("Welcome! Select a category, enter a value and get the converted result in real-time")
 
@@ -34,7 +42,7 @@ def convert_units(category, value, unit):
     return 0
         
 if category == "Length":
-    unit = st.selectbox("📏 Select Conversation", ["Miles to Kilometers","Kilometers to Miles"])
+    unit = st.selectbox("Select Conversation", ["Miles to Kilometers","Kilometers to Miles"])
 elif category == "Weight":
     unit = st.selectbox("⚖️ Select Conversation", ["Kilograms to pounds", "Pounds to kilograms"])
         
